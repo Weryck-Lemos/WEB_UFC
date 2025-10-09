@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>QXD0020 — HTML5 (II) — Site sem CSS</title>
+</head>
+
+<body>
+    <h1>QXD0020 — Desenvolvimento de Software para Web</h1>
+    <p>HTML(5): semântica, listas, tabelas, formulários, multimídia</p>
+
+    <nav aria-label="Menu Principal">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <a href="#semantica" accesskey="s" tabindex="1" title="Semântica (Alt+S)">
+                    Semântica
+                </a>
+            </li>
+            <li>
+                <a href="#listas" accesskey="l" tabindex="2" title="Listas (Alt+L)">
+                    Listas
+                </a>
+            </li>
+            <li><a href="#links" accesskey="n" tabindex="3" title="Links/Âncoras (Alt+N)">Links</a></li>
+            <li><a href="#divspan" accesskey="d" tabindex="4" title="Divs e Spans (Alt+D)">Divs e Spans</a></li>
+            <li><a href="#tabelas" accesskey="t" tabindex="5" title="Tabelas (Alt+T)">Tabelas</a></li>
+            <li><a href="#form" accesskey="f" tabindex="6" title="Formulários (Alt+F)">Formulários</a></li>
+            <li><a href="#midia" accesskey="m" tabindex="7" title="Multimídia (Alt+M)">Multimídia</a></li>
+            <li><a href="#validacao" accesskey="v" tabindex="8" title="Validadores (Alt+V)">Validadores</a></li>
+        </ul>
+    </nav>
+
+    <p>Alt + S/L/N/D/T/F/M/V/K ((em alguns navegadores: Ctrl/Shift + Alt + tecla).) </p>
+
+    <main id="conteudo">
+        <section id="semantica">
+            <h2>HTML semântico</h2>
+            <p>Semântica é dar sgnificado à estrutura. </p>
+
+            <article>
+                <h3>Tags principais</h3>
+                <ul>
+                    <li><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+                        <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>,
+                        <code>&lt;footer&gt;</code>
+                    </li>
+                    <li><code>&lt;figure&gt;</code> + <code>&lt;figcaption&gt;</code>, <code>&lt;time&gt;</code>,
+                        <code>&lt;mark&gt;</code>
+                    </li>
+                </ul>
+
+                <figure>
+                    <img src="smile.jpg" alt="icone de rosto sorridente" width="90" height="90">
+                    <figcaption>Figura 1 - Exemplo de <code>figure</code> com legenda</figcaption>
+                </figure>
+
+                <p>
+                    Hoje é <time datetime="2025-09-18">18 de setembro de 2025</time>
+                    Este é um <mark>texto destacado</mark> usando <code>&lt;mark&gt;</code>.
+                </p>
+
+            </article>
+        </section>
+
+        <section id="listas">
+            <h2>Listas (UL, OL e DL)</h2>
+
+            <article>
+                <h3>Lista nào ordenada (UL)</h3>
+                <ul>
+                    <li>café</li>
+                    <li>Chá</li>
+                    <li>Leite</li>
+                </ul>
+
+                <h3>Lista ordenada (OL)</h3>
+                <ol>
+                    <li>Primeiro</li>
+                    <li>Segundo</li>
+                    <li>Terceiro</li>
+                </ol>
+
+                <h3>Lista de definição (DL)</h3>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>Linguagem de marcação pra web</dd>
+                    <dt>CSS</dt>
+                    <dd>Folhas de estilo em cascata</dd>
+                    <dt>JavaScript</dt>
+                    <dd>Linguagem de programação para a Web</dd>
+                </dl>
+            </article>
+        </section>
+
+        <section id="links">
+            <h2>Links (âncoras) e âncoras internas</h2>
+
+            <article>
+                <h3>Link externo</h3>
+                <p>Visite o site da <a href="https://www.ufc.br">UFC</a>.</p>
+
+                <h3 id="topo-exemplo">Link interno</h3>
+                <p>Este é o topo desta subseção</p>
+                <p> <a href="#topo-exemplo"> Voltar ao topo da subseção</a></p>
+            </article>
+        </section>
+
+        <section id="divspan">
+            <h2> Divs e Spans - containers Genéricos</h2>
+
+            <article>
+                <h3>Exempl simples</h3>
+                <div>
+                    <p>Este parágrafo está dentro de uma <code>div</code></p>
+                    <p>Texto <span>este é um <code>span</code> no meio de uma <code>div</code></span></p>
+                </div>
+            </article>
+        </section>
+
+        <section id="tabelas">
+            <article>
+                <table border="1">
+                    <caption>Econmias menais</caption>
+                    <thead>
+                        <tr>
+                            <th>Mês</th>
+                            <th>Poupança</th>
+                            <th>Observação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Janeiro</th>
+                            <td>R$ 100</td>
+                        </tr>
+                           <tr>
+                            <th>Fevereiro</th>
+                            <td>R$ 100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <br>
+
+        <section id ="form">
+            <article>
+                <form action="#" method="get">
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <label for="first">Nome: </label>
+                        <input type="first" name="firstname" type="text" placeholder="Primeiro nome">
+
+                        <label for="last">Sobrenome: </label>
+                        <input type="last" name="lastname" type="text" placeholder="sobrenome">
+
+                        <label for="daybirth">Idade: </label>
+                        <input type="daybirth" name="age" type="number" placeholder="idade">
+
+                        <label for="email">E-mail: </label>
+                        <input type="email" name="email" type="email" placeholder="E-mail">
+                        <br>
+
+                        <p>Gênero</p>
+                        <label>Masculino</label>
+                        <input type="radio" name="gender" id="male" value="M">
+                        <label>Feminino</label>
+                        <input type="radio" name="gender" id="female" value="F">
+
+                        <label>Carro preferido</label>
+                        <select name="car">
+                            <option>Volvo</option>
+                            <option>Saab</option>
+                            <option>Mercedes</option>
+                            <option>Audi</option>
+                        </select>
+                    </fieldset>
+
+                    <p>
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Limpar</button>
+                    </p>
+                </form>
+
+                <section id="midia">
+                    <h2>Multimídia</h2>
+
+                    <h3>Imagens simples</h3>
+                    <img src="generic.jpg" alt="imagem genérica">
+
+                    <h3>Áudio</h3>
+                    <audio controls>
+                        <source src="audio.mp3" type="audio/mpeg">Seu navegador não suporta áudio
+                    </audio>
+
+                    <h3>Vídeo</h3>
+                    <video controls poster="generic.jpg"><source src="video.mp4" type="video/mp4">Seu navegaodr não suporta vídeos</video>
+                </section>
+            </article>
+
+        </section>
+
+    </main>
+
+    <aside>
+        <h2>Boas práticas</h2>
+        <ol>
+            <li>Use apenas um main por página</li>
+            <li>Inclua o atributo alt em todas as imagens</li>
+            <li>etc</li>
+        </ol>
+    </aside>
+
+    <footer>
+        <h2>Contato</h2>
+            <address>Universidade Federal do Ceará <br>
+                Campus Quixadá
+            </address>
+    </footer>
+
+</body>
+
+</html>

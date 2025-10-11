@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h2>Controle de Despesas</h2></header>
+    
+
+    <div class="form">
+    <input id="descricao" type="text" placeholder="Descrição">
+    <input id="valor" type="number" placeholder="Valor" min="0">
+
+    <select id="categoria">
+        <option value="Alimentação">Alimentação</option>
+        <option value="Transporte">Transporte</option>
+        <option value="Lazer">Lazer</option>
+    </select>
+
+    <button id="adicionar">Adicionar</button>
+    </div>
+
+    <table>
+    <thead>
+        <tr>
+        <th>Descrição</th>
+        <th>Categoria</th>
+        <th>Valor</th>
+        <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+    </table>
+
+    <div id="total">Total: R$ 0,00</div>
+
+    <footer>Weryck Lemos - 568334</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

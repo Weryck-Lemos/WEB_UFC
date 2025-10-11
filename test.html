@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade</title>
+  <style>
+    body{
+      margin: 40px;
+      background-color: rgb(212, 218, 223);
+    }
+
+    h2{
+      color: rgb(22, 22, 22);
+      margin: 20px;
+    }
+
+    input{
+      border-radius: 6px;
+      padding: 5px;
+      margin: 5px;
+    }
+
+    button{
+      border-radius: 6px;
+      padding: 5px;
+      margin: 5px;
+      color: whitesmoke;
+      background-color: rgb(43, 95, 54);
+    }
+
+    button:hover{
+      background-color: rgb(33, 182, 33);
+    }
+
+    ul{
+      list-style: none;
+      margin: 10px;
+      padding: 8px;
+    }
+
+
+    li{
+      margin: 2px;
+      padding: 8px;
+      border: 2px solid, black;
+    }
+
+    .aprovado{
+      background-color: rgb(177, 233, 177);
+    }
+
+    .reprovado{
+      background-color: rgb(243, 167, 167);
+    }
+
+    .aprovado:hover{
+      background-color: rgb(73, 199, 73);
+    }
+
+    .reprovado:hover{
+      background-color: rgb(214, 83, 83);
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>Notas dos Alunos:</h2>
+
+  <input id="nome" type="text" placeholder="Coloque o nome">
+  <input id="n1" type="number" placeholder="N1">
+  <input id="n2" type="number" placeholder="N2">
+  <br>
+  <button id="adicionar">Adicionar</button>
+  <button id="limpar">Limpar</button>
+
+  <ul id="lista"></ul>
+
+  <script>
+    let lista = document.getElementById("lista")
+    let btnAdd = document.getElementById("adicionar")
+    let btnClear = document.getElementById("limpar")
+
+    btnAdd.addEventListener("click", function(){
+      let nome = document.getElementById("nome").value
+      let n1 = parseFloat(document.getElementById("n1").value)
+      let n2 = parseFloat(document.getElementById("n2").value)
+      let media = (n1+n2)/2.0
+
+      let li = document.createElement("li")
+      li.innerHTML = `Nome: ${nome} | N1:${n1} | N2:${n2} | MEDIA:${media}`
+
+      if(media >=7)li.className ="aprovado"
+      else li.className = "reprovado"
+
+      li.addEventListener("click" ,function(){
+        lista.removeChild(li)
+      });
+
+      lista.appendChild(li)
+
+      document.getElementById("nome").value = ""
+      document.getElementById("n1").value = ""
+      document.getElementById("n2").value = ""
+
+    })
+
+    btnClear.addEventListener("click", function(){
+      lista.innerHTML = "";
+    });
+
+
+  </script>
+</body>
+</html>

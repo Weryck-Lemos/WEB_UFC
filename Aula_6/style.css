@@ -1,0 +1,55 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px;
+    background-color: aliceblue;
+}
+
+h2, h3{
+    color: rgb(27, 25, 25);
+}
+
+
+input{
+    margin: 5px;
+    padding: 8px;
+    border: 1px, solid, #ccc;
+    border-radius: 10px;
+}
+
+button{
+    color: aliceblue;
+    background-color: rgb(65, 116, 65);
+    border-radius: 6px;
+    padding: 10px;
+    margin: 5px;
+    cursor:alias;
+}
+
+button:hover{
+    background-color: rgb(83, 155, 83);
+}
+
+ul{
+    margin-top:15px;
+    padding: 0;
+    list-style: none;
+}
+
+li{
+    margin: 5px;
+    padding: 8px;
+    background: #e9ff39;
+    border: 1px solid #b2d8b2;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+li:hover{
+    background: #d6f5d6;
+}
+
+#total{
+    margin-top: 20px;
+    font-weight: bold;
+    color: #222
+}

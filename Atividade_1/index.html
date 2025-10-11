@@ -122,15 +122,6 @@
 
     add.addEventListener('click', adicionar);
     clear.addEventListener('click', function () { tbody.innerHTML = ''; });
-
-    nome.addEventListener('keydown', function (e) { if (e.key === 'Enter') n1.focus(); });
-    n1.addEventListener('keydown',   function (e) { if (e.key === 'Enter') n2.focus(); });
-    n2.addEventListener('keydown',   function (e) { if (e.key === 'Enter') adicionar(); });
-
-    tbody.addEventListener('click', function (e) {
-      var tr = e.target.closest('tr');
-      if (tr) tr.remove();
-    });
   </script>
 
 

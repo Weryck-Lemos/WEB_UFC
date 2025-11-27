@@ -1,0 +1,79 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  background-color: #1e88e5;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+
+:root {
+  --bg: #f4f6f8;
+  --text: #222;
+  --card: #fff;
+  --header: #1e88e5;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --card: #1e1e1e;
+  --header: #333;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: var(--header);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    text-align: center;
+  }
+}
+
+
+
